@@ -1,7 +1,10 @@
+// ignore_for_file: prefer_const_constructors, library_private_types_in_public_api, use_key_in_widget_constructors
+
 import 'package:flutter/material.dart';
 import 'package:flash_chat/constants.dart';
 
 class ChatScreen extends StatefulWidget {
+  static const id = 'chatScreen';
   @override
   _ChatScreenState createState() => _ChatScreenState();
 }

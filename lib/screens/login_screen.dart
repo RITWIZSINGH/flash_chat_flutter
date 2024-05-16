@@ -1,6 +1,10 @@
+// ignore_for_file: prefer_const_constructors, sized_box_for_whitespace, library_private_types_in_public_api, use_key_in_widget_constructors
+
 import 'package:flutter/material.dart';
 
 class LoginScreen extends StatefulWidget {
+
+  static const id = 'loginScreen';
   @override
   _LoginScreenState createState() => _LoginScreenState();
 }

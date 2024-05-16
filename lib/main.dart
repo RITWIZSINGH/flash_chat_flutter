@@ -1,4 +1,4 @@
-// ignore_for_file: unused_import, prefer_const_constructors
+// ignore_for_file: unused_import, prefer_const_constructors, use_key_in_widget_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
 import 'package:flash_chat/screens/welcome_screen.dart';
@@ -18,6 +18,13 @@ class FlashChat extends StatelessWidget {
         ),
       ),
       home: WelcomeScreen(),
+      initialRoute: WelcomeScreen.id ,
+      routes: {
+        WelcomeScreen.id :(context) => WelcomeScreen(),
+        LoginScreen.id :(context) => LoginScreen(),
+        RegistrationScreen.id :(context) => RegistrationScreen(),
+        ChatScreen.id :(context) => ChatScreen(),
+      },
     );
   }
 }
