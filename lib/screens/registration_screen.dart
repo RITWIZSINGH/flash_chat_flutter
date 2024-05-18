@@ -32,7 +32,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
             ),
             TextField(
               onChanged: (value) {
-                //Do something with the user input.
+
               },
               decoration: InputDecoration(
                 hintText: 'Enter your email',
