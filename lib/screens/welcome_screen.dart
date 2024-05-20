@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors, sort_child_properties_last, sized_box_for_whitespace, library_private_types_in_public_api, use_key_in_widget_constructors
+// ignore_for_file: prefer_const_constructors, sort_child_properties_last, sized_box_for_whitespace, library_private_types_in_public_api, use_key_in_widget_constructors, unnecessary_import, avoid_print
 
 import 'package:flash_chat/screens/login_screen.dart';
 import 'package:flash_chat/screens/registration_screen.dart';
@@ -6,18 +6,43 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
 class WelcomeScreen extends StatefulWidget {
-     
-   static const String id = 'welcomeScreen';  
+  static const String id = 'welcomeScreen';
 
   @override
   _WelcomeScreenState createState() => _WelcomeScreenState();
 }
 
-class _WelcomeScreenState extends State<WelcomeScreen> {
+class _WelcomeScreenState extends State<WelcomeScreen>
+    with SingleTickerProviderStateMixin {
+  late AnimationController controller;
+  late Animation animation;
+
+  @override
+  void initState() {
+    super.initState();
+
+    controller =
+        AnimationController(vsync: this, duration: Duration(seconds: 3));
+    animation = ColorTween(begin: Colors.blueGrey, end: Colors.white).animate(controller);
+    controller.forward();
+
+    
+    controller.addListener(() {
+      setState(() {});
+      print(animation.value);
+    });
+  }
+
+  @override
+  void dispose() {
+    controller.dispose();
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: animation.value,
       body: Padding(
         padding: EdgeInsets.symmetric(horizontal: 24.0),
         child: Column(
