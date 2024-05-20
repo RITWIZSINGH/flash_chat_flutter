@@ -1,12 +1,11 @@
 // ignore_for_file: prefer_const_constructors, sized_box_for_whitespace, library_private_types_in_public_api, use_key_in_widget_constructors, unnecessary_import, unused_import
 
+import 'package:flash_chat/components/rounded_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'welcome_screen.dart';
 
-
 class LoginScreen extends StatefulWidget {
-
   static const id = 'loginScreen';
   @override
   _LoginScreenState createState() => _LoginScreenState();
@@ -85,24 +84,11 @@ class _LoginScreenState extends State<LoginScreen> {
             SizedBox(
               height: 24.0,
             ),
-            Padding(
-              padding: EdgeInsets.symmetric(vertical: 16.0),
-              child: Material(
-                color: Colors.lightBlueAccent,
-                borderRadius: BorderRadius.all(Radius.circular(30.0)),
-                elevation: 5.0,
-                child: MaterialButton(
-                  onPressed: () {
-                    //Implement login functionality.
-                  },
-                  minWidth: 200.0,
-                  height: 42.0,
-                  child: Text(
-                    'Log In',
-                  ),
+            RoundedButton(
+                text: 'Log In',
+                colour: Colors.lightBlueAccent,
+                onPressed: () {}
                 ),
-              ),
-            ),
           ],
         ),
       ),
