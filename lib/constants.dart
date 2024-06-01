@@ -4,12 +4,17 @@ const kSendButtonTextStyle = TextStyle(
   color: Colors.lightBlueAccent,
   fontWeight: FontWeight.bold,
   fontSize: 18.0,
+
 );
 
 const kMessageTextFieldDecoration = InputDecoration(
   contentPadding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
   hintText: 'Type your message here...',
+  hintStyle: TextStyle(
+    color: Colors.grey,
+  ),
   border: InputBorder.none,
+  
 );
 
 const kMessageContainerDecoration = BoxDecoration(
@@ -38,3 +43,11 @@ const kTextFieldDecoration =   InputDecoration(
               ),
             );
   
+const kTextFieldStyleForEmail = TextStyle(
+                color: Colors.black,
+                fontWeight: FontWeight.w600,
+              );  
+
+const kTextFieldStyleForPassword = TextStyle(
+                color: Colors.black,
+              );               
