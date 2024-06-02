@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors, avoid_print, use_key_in_widget_constructors, library_private_types_in_public_api, prefer_const_constructors_in_immutables, unused_local_variable, must_be_immutable
+// ignore_for_file: prefer_const_constructors, avoid_print, use_key_in_widget_constructors, library_private_types_in_public_api, prefer_const_constructors_in_immutables, unused_local_variable, must_be_immutable, unnecessary_import
 
 import 'package:flutter/material.dart';
 import 'package:flash_chat/constants.dart';
